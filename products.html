@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Product Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .product-card {
+            width: 240px;
+            height: 20em;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            padding: 16px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 120px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .product-rating {
+            color: #ffa41b;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .product-actions {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .product-actions button {
+            border: none;
+            background: #f2f2f2;
+            padding: 8px;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .product-actions button:hover {
+            background: #ddd;
+        }
+
+        .add-to-cart {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #008cba;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover .add-to-cart {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .product-actions button i {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .add-to-cart i {
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="product-card">
+        <img src="./image/product1.jpg" alt="Awake Shower Shampoo Gel" class="product-image">
+        <div class="product-title">Awake Shower Shampoo Gel</div>
+        <div class="product-price">$87</div>
+        <div class="product-actions">
+            <button title="Add to Wishlist">♡</button>
+            <button title="Compare">⟳</button>
+            <button title="Search">🔍</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="./image/product1.jpg" alt="Image of Awake Shower Shampoo Gel" class="product-image">
+        <h3 class="product-title">Awake Shower Shampoo Gel</h3>
+        <p class="product-price">$87</p>
+        <div class="product-actions">
+            <button class="wishlist-button" title="Add to Wishlist"
+                aria-label="Add Awake Shower Shampoo Gel to Wishlist">♡</button>
+            <button class="compare-button" title="Compare" aria-label="Compare Awake Shower Shampoo Gel">⟳</button>
+            <button class="search-button" title="Search"
+                aria-label="Search for similar products to Awake Shower Shampoo Gel">🔍</button>
+        </div>
+        <button class="add-to-cart" aria-label="Add Awake Shower Shampoo Gel to Cart">Add to Cart</button>
+    </div>
+
+
+    <div class="product-card">
+        <img src="./image/product1.jpg" alt="Image of Awake Shower Shampoo Gel" class="product-image">
+        <h3 class="product-title">Awake Shower Shampoo Gel</h3>
+        <p class="product-price">$87</p>
+        <div class="product-actions">
+            <button class="wishlist-button" title="Add to Wishlist" aria-label="Add Awake Shower Shampoo Gel to Wishlist">
+                <i class="fas fa-heart"></i>
+            </button>
+            <button class="compare-button" title="Compare" aria-label="Compare Awake Shower Shampoo Gel">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+            <button class="search-button" title="Search"
+                aria-label="Search for similar products to Awake Shower Shampoo Gel">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button class="add-to-cart" aria-label="Add Awake Shower Shampoo Gel to Cart">
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+    </div>
+
+
+</body>
+
+</html>
