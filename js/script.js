@@ -89,3 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
         menuIcon.classList.toggle('change');
     });
 });
+//for copy right function
+document.getElementById("year").textContent = new Date().getFullYear();
